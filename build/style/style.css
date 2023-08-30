@@ -1,0 +1,230 @@
+@import url("./fonts.css");
+
+.Register {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top:50% ;
+    width: 60%;
+    height: 40%;
+    border-radius: 25px;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(218, 218, 218);
+
+}
+
+.input-login {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 150px;
+    border-radius: 20px;
+    border: none;
+}
+
+.b1 {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    height: 200px;
+    object-fit: cover; /* Этот стиль сохраняет пропорции изображения и делает его заполняющим */
+    border-radius: 15px;
+}
+.place {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 30px;
+    font-family: 'Zhizn';
+    white-space: nowrap;
+}
+.placedata {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 15px;
+    
+    white-space: nowrap;
+}
+.place-text {
+    position: absolute;
+    top: 250px;
+    left: 5px;
+    font-size: 25px;
+}
+.createpost {
+    position: absolute;
+    width: 95%;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    text-align:center;
+    font-size: 30px;
+    height: 100px; /* Автоматическая высота в зависимости от содержимого */
+    
+}
+.addpost {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+}
+.createpost p {
+font-family: "Exo 2";
+font-weight: bold;
+}
+.Post {
+    position: relative;
+    width: 95%;
+    margin: 5px;
+    left: 49%;
+    transform: translate(-50%);
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    height: auto; /* Автоматическая высота в зависимости от содержимого */
+    overflow: hidden; 
+}.Post p {
+    word-wrap: break-word; /* Разрешить перенос слов */
+    font-family: "Zhizn";
+color:white;
+}
+
+.Post-data {
+    position: absolute;
+    bottom: -5px;
+    right: 5px;
+    font-size: 15px;
+    
+}.Post-text {
+font-size: 30px;
+
+}
+
+
+
+.g1 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 230px;
+    width: 376px; 
+    height: 346px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+
+.g2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 100px;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+.inputphoto {
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 150px;
+    border-radius: 15px;
+    font-size: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+.g1::placeholder {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    word-wrap: break-word; 
+}
+
+
+.upload {
+    position: absolute;
+    bottom: 10px;
+    width: 85%;
+    height: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 25px;
+    font-size: 30px;
+    font-family: "Exo 2";
+    font-weight: bold;
+
+
+}
+.Post-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Этот стиль сохраняет пропорции изображения и делает его заполняющим */
+    position: absolute; /* Позиционируем изображение относительно родительского div */
+    top: 0;
+    left: 0;
+    filter: blur(3px);
+    z-index: -1;
+    }
+
+
+    .Post-Skeleton {
+        position: relative;
+        width: 95%;
+        margin: 5px;
+        left: 49%;
+        transform: translateX(-50%);
+        border: 2px;
+        border-color: black;
+        border-style: solid;
+        border-radius: 15px;
+        height: 100px; /* Автоматическая высота в зависимости от содержимого */
+        overflow: hidden;
+        background-color: #f0f0f0; /* Цвет скелетона */
+
+      }
+      
+      .Skeleton-Image {
+        word-wrap: break-word;
+        font-family: "Zhizn";
+        color: #dcdcdc; /* Цвет текста скелетона */
+      }
+      
+      .Skeleton-Data {
+        position: absolute;
+        bottom: -5px;
+        right: 5px;
+        font-size: 15px;
+        color: #dcdcdc; /* Цвет данных скелетона */
+      }
+      
+
+      
+      .Skeleton-Image {
+        width: 90%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top:50%;
+        border-radius: 15px;
+        height: 80px; /* Высота изображения в скелетоне */
+        background-color: #dcdcdc; /* Цвет изображения в скелетоне */
+      }
+      
