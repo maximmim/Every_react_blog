@@ -36,7 +36,9 @@ function Home() {
         ))
         
               )}
-    <img onClick={()=>{window.location.href = 'adm'}} className="addpost" src="../img/plus.png"/>
+    <img onClick={()=>{window.location.href = 'adm'}} className="addpost" src="../img/add.png"/>
+    <img onClick={()=>{window.location.href = 'settings'}} className="settings" src="../img/settings.png"/>
+
     </>
   );
 }
