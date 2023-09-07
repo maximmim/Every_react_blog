@@ -10,7 +10,7 @@ function Admin() {
   const [fulltext, setfulltext] = useState('');
   const [imgurl, setimgurl] = useState('');
   const fileInputRef = useRef(null);
-
+  const [ddaw, setd] = useState('Виберіть фото для статі');
   const imageListRef = ref(storage, "images/");
 
   function formatTime(date) {
@@ -27,10 +27,11 @@ function Admin() {
 
   
   function handleUpload() {
-    if (img) { // Check if img is not null
+    if (img) {
+      alert("Не покидайте сторінки це може бути фатально") // Check if img is not null
       const imageRef = ref(storage, "images/" + img.name + v4());
       uploadBytes(imageRef, img).then(() => {
-        alert("File uploaded successfully");
+        
         getDownloadURL(imageRef).then(async (url) => {
           const currentTime = new Date();
           const formattedTime = formatTime(currentTime);
@@ -42,7 +43,7 @@ function Admin() {
             }
 
           try { 
-            alert("Не покидайте сторінки це може бути фатально")
+            
             const response = await fetch("https://644ab0e4a8370fb32155be44.mockapi.io/item", {
               method: "POST",
               headers: {
@@ -53,8 +54,8 @@ function Admin() {
       
             if (response.ok) {
               const result = await response.json();
-              console.log("Пост завантажений :", result);
               window.location.href = "/"
+              alert("Стаття завантажена✅")
             } else {
               console.error("Error creating post:", response.status, response.statusText);
             }
@@ -64,8 +65,6 @@ function Admin() {
       
         });
       });
-    } else {
-      alert("Please select an image before uploading.");
     }
   }
   useEffect(() => {
@@ -89,6 +88,7 @@ function Admin() {
   const handleFileChange = (event) => {
     setImg(event.target.files[0])
     // Обработка выбранного файла...
+    setd("Ваш файл завантажено ")
   };
 
   const handleInputChange1 = (event) => {
@@ -115,8 +115,8 @@ function Admin() {
         placeholder="Ведіть заголовок"
         value={placeholder}
         onChange={handleInputChange2}
-      />
-      <button className="inputphoto" onClick={handleFileInputClick}>Виберіть фото для статі</button>
+        />
+      <button className="inputphoto" onClick={handleFileInputClick}>{ddaw}</button>
       <input
         ref={fileInputRef}
         accept=".jpg, .png, .webp, .jpeg"
@@ -124,7 +124,7 @@ function Admin() {
         style={{ display: "none" }}
         onChange={handleFileChange}
       />
-      <button className="upload" onClick={handleUpload}>Завантажити файл</button>
+      <button className="upload" onClick={handleUpload}>Завантажити статю</button>
 
 
     </>

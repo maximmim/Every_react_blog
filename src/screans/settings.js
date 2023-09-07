@@ -1,12 +1,17 @@
+import { useState } from "react"
 
 
 
 function Settings() {
-
+const [nick,setnick] = useState('')
 
     return (
         <>
-            <h1>21111111111111111111</h1>   
+            <input
+            type="text"
+            value={nick}
+            onChange={(event) => setnick(event.target.value)}
+            />
         </>
     )
 }

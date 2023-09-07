@@ -106,8 +106,8 @@ font-weight: bold;
     height: auto; /* Автоматическая высота в зависимости от содержимого */
     overflow: hidden; 
 }.Post p {
-    word-wrap: break-word; /* Разрешить перенос слов */
-    font-family: "Zhizn";
+word-wrap: break-word; /* Разрешить перенос слов */
+font-family: "Zhizn";
 color:white;
 }
 
