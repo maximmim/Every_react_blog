@@ -2,7 +2,7 @@ import Home from './screans/home';
 import Admin from './screans/adminscrean';
 import  {Fulltext}  from './screans/fulltext';
 import Settings from './screans/settings';
-import { Route, Routes, BrowserRouter } from 'react-router-dom'; // Замените Switch на Routes
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (

@@ -83,8 +83,7 @@
 .settings {
     position: fixed;
     bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
+    left: 50px;
     width: 70px;
     height: 70px;
 }
@@ -133,6 +132,10 @@ font-size: 30px;
     height: 346px;
     font-size: 20px;
     border-radius: 20px;
+    border: 2px;
+    border-color: black;
+    padding: 10px;
+    border-style: solid;
 }
 
 
@@ -150,14 +153,18 @@ font-size: 30px;
 }
 
 .inputphoto {
-    position: absolute;
-    transform: translate(-50%);
-    left: 50%;
-    bottom: 150px;
+    position: fixed;
+    left: 35%;
+    transform: translate(-35%);
+    bottom: 10px;
     border-radius: 15px;
     font-size: 20px;
     width: 200px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
     height: 100px;
+
 }
 
 .g1::placeholder {
@@ -167,20 +174,19 @@ font-size: 30px;
     word-wrap: break-word; 
 }
 
-
 .upload {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
-    width: 85%;
+    width: 100px;
     height: 100px;
-    left: 50%;
-    transform: translate(-50%);
+    right: 20px;
     border-radius: 25px;
     font-size: 30px;
     font-family: "Exo 2";
     font-weight: bold;
-
-
+    border: 2px;
+    border-style: solid;
+    border-color: black;
 }
 .Post-img {
     width: 100%;
@@ -192,8 +198,28 @@ font-size: 30px;
     filter: blur(3px);
     z-index: -1;
     }
+button {
+    color: black;
+}
 
-
+/* Создаем анимацию entry */
+@keyframes entry {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Применяем анимацию к элементу с классом "entry-animate" */
+  .entry-animate {
+    animation: entry 0.5s ease forwards;
+  }
+  
+  
     .Post-Skeleton {
         position: relative;
         width: 95%;
@@ -209,6 +235,13 @@ font-size: 30px;
         background-color: #f0f0f0; /* Цвет скелетона */
 
       }
+.plas {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    top: 20%;
+    font-family: "Zhizn";
+}
       
       .Skeleton-Image {
         word-wrap: break-word;

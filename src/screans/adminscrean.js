@@ -10,7 +10,7 @@ function Admin() {
   const [fulltext, setfulltext] = useState('');
   const [imgurl, setimgurl] = useState('');
   const fileInputRef = useRef(null);
-  const [ddaw, setd] = useState('Виберіть фото для статі');
+  const [ddaw, setd] = useState("../img/photp.png");
   const imageListRef = ref(storage, "images/");
 
   function formatTime(date) {
@@ -88,7 +88,7 @@ function Admin() {
   const handleFileChange = (event) => {
     setImg(event.target.files[0])
     // Обработка выбранного файла...
-    setd("Ваш файл завантажено ")
+    setd("../img/photpfull.png")
   };
 
   const handleInputChange1 = (event) => {
@@ -116,7 +116,7 @@ function Admin() {
         value={placeholder}
         onChange={handleInputChange2}
         />
-      <button className="inputphoto" onClick={handleFileInputClick}>{ddaw}</button>
+      <img className="inputphoto" src={ddaw} onClick={handleFileInputClick}/>
       <input
         ref={fileInputRef}
         accept=".jpg, .png, .webp, .jpeg"
@@ -124,7 +124,7 @@ function Admin() {
         style={{ display: "none" }}
         onChange={handleFileChange}
       />
-      <button className="upload" onClick={handleUpload}>Завантажити статю</button>
+      <img src="../img/upload.png" className="upload" onClick={handleUpload} />
 
 
     </>

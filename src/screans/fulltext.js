@@ -4,9 +4,9 @@ import React from 'react';
 export function Fulltext() {
 let data;
 if (localStorage.data) {
-data = JSON.parse(localStorage.data);
+  data = JSON.parse(localStorage.data);
 setTimeout(()=>{
-localStorage.removeItem('data')
+  localStorage.removeItem('data')
 },1000)
 
 }
